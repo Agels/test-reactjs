@@ -15,6 +15,7 @@ export default function Cart() {
           <table class="table table-borderless">
             <thead>
               <tr>
+                <th scope="col">images</th>
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Qty</th>
@@ -24,6 +25,7 @@ export default function Cart() {
               {!cart ? 'error' : cart.map((el) => {
                 return (
                   <tr>
+                    <td><img style={{width:'50px',borderRadius:'50px'}} src={el.images[0]} /></td>
                     <td>{el.name}</td>
                     <td>{formatRupiah(el.price)}</td>
                     <td>{el.qty}</td>
