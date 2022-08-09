@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Container, Card } from "react-bootstrap";
 import Navbars from "../../component/navbar";
+import { formatRupiah } from "../../helper";
 
 export default function Cart() {
   const cart = useSelector((state) => state.cart);
@@ -24,7 +25,7 @@ export default function Cart() {
                 return (
                   <tr>
                     <td>{el.name}</td>
-                    <td>{el.price}</td>
+                    <td>{formatRupiah(el.price)}</td>
                     <td>{el.qty}</td>
                   </tr>
                 );

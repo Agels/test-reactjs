@@ -31,7 +31,7 @@ console.log(variant)
 
   return (
     <>
-      {/* <Navbars fromProduct={true}/> */}
+      <Navbars fromProduct={true}/> 
       <Container className="mt-3">
         <Row>
           <Col>
